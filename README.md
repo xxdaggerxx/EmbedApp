@@ -20,3 +20,20 @@ here's a brief overview of the app implimentation.<br>
 </ul>
 
 <h1>(Step 1) Embed Iframe App.</h1>
+Add this Code anywhere in the <BODY></BODY> Tags of your HTML.
+```javascript
+<iframe src="" width="1000" height="1200" scrolling="no" id="iframeEmbed"></iframe>
+<script type="text/javascript">
+//Set Up variables For Embedable App.///
+var USER = "[ACCESS CODE]";
+var productName = "Roman Name Ring";
+var shoppingcart = "http://localhost/FakeShoppingCart.php";
+////////////////////////////////////////////////////////////
+var Poly_embed = document.getElementById("iframeEmbed");
+Poly_embed.src = "Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart);
+</script>
+```
+Replace the [Access code] with the one issued to you.<br>
+<b>productName variable</b> is the name of the default product. You can change this to which ever you prefer. You can also use the product SKU.<br>
+<b>shoppingcart variable</b> is most important. This is your shopping cart page that will recieve the product Details. Leave this empty if you prefer to use Polychemy.com's shopping cart.
+
