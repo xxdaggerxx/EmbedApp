@@ -10,9 +10,11 @@ The apps can be hooked up to the your shopping cart, ensuring a much better user
 
 
 <h1> How Does it Work? </h1>
-here's a brief overview of the app implimentaiton.<br>
+here's a brief overview of the app implimentation.<br>
 
 <ul>
-<li>Hello</li>
-
+<li>Embed the Polychemy App to your web site, with our simple I-Frame Code, and configure settings.</li>
+<li>When the customers presses "Add To Cart", A POST request is send to your shopping cart page, with product details and image. Customization Data is also sent in JSON.</li>
+<li>Once your customers completes the check out process on your site and confirms payment. You place the order with a POST request to our API, forwarding the product details and customization data. Multiple products can be sent in one cart.</li>
+<li> Finally once, payment is made, we will begin manufacturing.</li>
 </ul>
