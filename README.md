@@ -19,7 +19,7 @@ here's a brief overview of the app implimentation.<br>
 <li> Finally , once payment is made, we will begin manufacturing.</li>
 </ul>
 
-<h1>(Step 1) Embed Iframe App.</h1>
+<h1>Step 1 - Embed Iframe App.</h1>
 Add this Code anywhere in the <BODY></BODY> Tags of your HTML.
 ```javascript
 <iframe src="" width="1000" height="1200" scrolling="no" id="iframeEmbed"></iframe>
@@ -37,3 +37,13 @@ Replace the [Access code] with the one issued to you.<br>
 <b>productName variable</b> is the name of the default product. You can change this to which ever you prefer. You can also use the product SKU.<br>
 <b>shoppingcart variable</b> is most important. This is your shopping cart page that will recieve the product Details. Leave this empty if you prefer to use Polychemy.com's shopping cart.
 
+<h1>Step 2 - Create Your Shopping Cart.</h1>
+After the user has finished customizing thier products on the app, and is ready to check out.<br>
+The "Check Out" Button is pressed. Variables will be sent with the POST Method to the shopping cart you specified in the previous step.<br>
+POST Variables.<br>
+
+<ul>
+
+<li></li>
+
+</ul>
