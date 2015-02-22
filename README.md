@@ -18,3 +18,5 @@ here's a brief overview of the app implimentation.<br>
 <li>Once your customers completes the check out process on your site and confirms payment. You place the order with a POST request to our API, forwarding the product details and customization data. Multiple products can be sent in one cart.</li>
 <li> Finally , once payment is made, we will begin manufacturing.</li>
 </ul>
+
+<h1>(Step 1) Embed Iframe App.</h1>
