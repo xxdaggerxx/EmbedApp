@@ -40,10 +40,15 @@ Replace the [Access code] with the one issued to you.<br>
 <h1>Step 2 - Create Your Shopping Cart.</h1>
 After the user has finished customizing thier products on the app, and is ready to check out.<br>
 The "Check Out" Button is pressed. Variables will be sent with the POST Method to the shopping cart you specified in the previous step.<br>
-POST Variables.<br>
-
+POST Variables Details.<br>
 <ul>
 
-<li></li>
+<li><b>Name</b> - Name of the product "Roman Name Ring"</li>
+<li><b>Price</b> - Retail Price of Product "$119.99"</li>
+<li><b>Image</b> - Image address of product "http://polychemy3d.com/ModelDATABASE.php?getfile=JPG&ID=659520651679486100" </li>
+<li><b>ProductDATA</b> - A Stringified JSON Data</li>
+<li><b>ID</b> - User ID.</li>
 
 </ul>
+
+This data should be stored on your shopping cart database.
