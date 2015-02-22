@@ -7,3 +7,12 @@ Customers can customize thier own products and purchase directly of your site, w
 The apps can be hooked up to the your shopping cart, ensuring a much better user expirence for your customers.<br>
 
 </p>
+
+
+<h1> How Does it Work? </h1>
+here's a brief overview of the app implimentaiton.<br>
+
+<ul>
+<li>Hello</li>
+
+</ul>
