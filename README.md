@@ -34,8 +34,8 @@ Poly_embed.src = "Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shop
 </script>
 ```
 Replace the [Access code] with the one issued to you.<br>
-<b>productName variable</b> is the name of the default product. You can change this to which ever you prefer. You can also use the product SKU.<br>
-<b>shoppingcart variable</b> is most important. This is your shopping cart page that will recieve the product Details. Leave this empty if you prefer to use Polychemy.com's shopping cart.
+<b>productName</b> variable is the name of the default product. You can change this to which ever you prefer. You can also use the product SKU.<br>
+<b>shoppingcart</b> variable is most important. This is your shopping cart page that will recieve the product Details. Leave this empty if you prefer to use Polychemy.com's shopping cart.
 
 <h1>Step 2 - Create Your Shopping Cart.</h1>
 After the user has finished customizing thier products on the app, and is ready to check out.<br>
@@ -63,8 +63,9 @@ Here is a PHP example of placing an order with our order.php API.
 ```PHP
 <?php
 //Set Customer data and shipping details.
+//We Will ship the product to this address.
 $CustomerData = new stdClass();
-$CustomerData->email = "aaron.issac@gmail.com";
+$CustomerData->email = "customer@gmail.com";
 $CustomerData->street = "Ave 12";
 $CustomerData->city = "New York";
 $CustomerData->state = "New York";
@@ -72,23 +73,27 @@ $CustomerData->zip = "123232";
 $CustomerData->country = "United Statesdsf";
 $CustomerData->name = "John Doe";
 $CustomerData->hpnumber = "383748743";
-$CustomerData->gender = "none";
-$CustomerData->forwho = "none";
 $CustomerData->occasion = "none";
 //Leave these variables blank.
+$CustomerData->gender = "none";
+$CustomerData->forwho = "none";
 $CustomerData->coupon = "";
 $CustomerData->cdtoken = "";
 
-//send invoice. if false, no invoice will be sent.
+//send polcyehmy invoice. if false, no invoice will be sent.
+//If oyu want to send your own invoice, then keep this as FALSE.
 $CustomerData->sendinvoice = false;
 
 //Identification Variables
 $referalData = new stdClass();
+
+///***Replace ACCESS ID with the Access ID you were given.
 $referalData->referalID = "[ACCESS ID]";
 $referalData->type = "[ACCESS ID]";
 
 ///Add Product Data into shopping cart array.
-//If there are multiple products in the shopping cart, then all to the array
+//This product Data is given to you from the previous step. Product data contains the customization settings for each product.
+//If there are multiple products in the shopping cart, then add all to the array.
 $ShoppingCart = array();
 array_push($ShoppingCart, json_decode($_POST["ProductDATA"]));
 
@@ -97,13 +102,17 @@ array_push($ShoppingCart, json_decode($_POST["ProductDATA"]));
 $customizationData = new stdClass();
 $customizationData->customerData = $CustomerData;
 $customizationData->ShoppingCart = $ShoppingCart;
-//Set User ID.
+
+//**Set User ID. The user ID is given to you from the previous setp. Any USER ID, from any product in the cart will be fine.
 $customizationData->ID = $_POST["ID"];
+
 //get referal information if there's any
 $customizationData->referal = $referalData;	
 //set payment type.
-$customizationData->paymentType = "ExternalCart";	
-$customizationData->secret = "polychemy";
+$customizationData->paymentType = "ExternalCart";
+
+//** This is your Secret Key.
+$customizationData->secret = "[SECRET KEY]";
 
 
 //CURL POST Script.
