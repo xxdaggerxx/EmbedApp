@@ -19,8 +19,8 @@ here's a brief overview of the app implimentation.<br>
 <li> Finally , once payment is made, we will begin manufacturing.</li>
 </ul>
 
-<h1>Step 1 - Embed Iframe App.</h1>
-Add this Code anywhere in the <BODY></BODY> Tags of your HTML.
+<h1>Step 3 - Embed Iframe App.</h1>
+Add this Code anywhere in the BODY Tags of your HTML.
 ```javascript
 <iframe src="" width="1000" height="1200" scrolling="no" id="iframeEmbed"></iframe>
 <script type="text/javascript">
@@ -39,7 +39,7 @@ Replace the [Access code] with the one issued to you.<br>
 
 <h1>Step 2 - Create Your Shopping Cart.</h1>
 After the user has finished customizing thier products on the app, and is ready to check out.<br>
-The "Check Out" Button is pressed. Variables will be sent with the POST Method to the shopping cart you specified in the previous step.<br>
+The "Check Out" Button is pressed. Variables will be sent via POST Method to your shopping cart you specified in the previous step.<br>
 POST Variables Details.<br>
 <ul>
 
@@ -52,3 +52,90 @@ POST Variables Details.<br>
 </ul>
 
 This data should be stored on your shopping cart database.
+
+<h1>Step 3 - Send the order to Polychemy</h1>
+<p>
+Once your customers has finsihed the checkout process, and payment has been made. You will have to send us the order, and customization details from the previous step.
+</p>
+
+Here is a PHP example of placing an order with our order.php API.
+
+```PHP
+<?php
+//Set Customer data and shipping details.
+$CustomerData = new stdClass();
+$CustomerData->email = "aaron.issac@gmail.com";
+$CustomerData->street = "Ave 12";
+$CustomerData->city = "New York";
+$CustomerData->state = "New York";
+$CustomerData->zip = "123232";
+$CustomerData->country = "United Statesdsf";
+$CustomerData->name = "John Doe";
+$CustomerData->hpnumber = "383748743";
+$CustomerData->gender = "none";
+$CustomerData->forwho = "none";
+$CustomerData->occasion = "none";
+//Leave these variables blank.
+$CustomerData->coupon = "";
+$CustomerData->cdtoken = "";
+
+//send invoice. if false, no invoice will be sent.
+$CustomerData->sendinvoice = false;
+
+//Identification Variables
+$referalData = new stdClass();
+$referalData->referalID = "[ACCESS ID]";
+$referalData->type = "[ACCESS ID]";
+
+///Add Product Data into shopping cart array.
+//If there are multiple products in the shopping cart, then all to the array
+$ShoppingCart = array();
+array_push($ShoppingCart, json_decode($_POST["ProductDATA"]));
+
+
+
+$customizationData = new stdClass();
+$customizationData->customerData = $CustomerData;
+$customizationData->ShoppingCart = $ShoppingCart;
+//Set User ID.
+$customizationData->ID = $_POST["ID"];
+//get referal information if there's any
+$customizationData->referal = $referalData;	
+//set payment type.
+$customizationData->paymentType = "ExternalCart";	
+$customizationData->secret = "polychemy";
+
+
+//CURL POST Script.
+//set POST variables and URL.
+$url = 'https://www.polychemy.com/php/Order.php';
+$fields = array(
+						'customerData' => urlencode(json_encode($customizationData)),
+						'command' => urlencode("addOrder")
+				);
+
+//url-ify the data for the POST
+$fields_string="";
+foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
+rtrim($fields_string, '&');
+
+//open connection
+$ch = curl_init();
+
+//set the url, number of POST vars, POST data
+curl_setopt($ch,CURLOPT_URL, $url);
+curl_setopt($ch,CURLOPT_POST, count($fields));
+curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+//execute post
+$result = curl_exec($ch);
+
+
+//close connection
+curl_close($ch);
+echo $result;
+?>
+```
+
