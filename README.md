@@ -30,7 +30,7 @@ var productName = "Roman Name Ring";
 var shoppingcart = "http://localhost/FakeShoppingCart.php";
 ////////////////////////////////////////////////////////////
 var Poly_embed = document.getElementById("iframeEmbed");
-Poly_embed.src = "Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart);
+Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart);
 </script>
 ```
 Replace the [Access code] with the one issued to you.<br>
