@@ -19,7 +19,7 @@ here's a brief overview of the app implimentation.<br>
 <li> Finally , once payment is made, we will begin manufacturing.</li>
 </ul>
 
-<h1>Step 3 - Embed Iframe App.</h1>
+<h1>Step 1 - Embed Iframe App.</h1>
 Add this Code anywhere in the BODY Tags of your HTML.
 ```javascript
 <iframe src="" width="1000" height="1200" scrolling="no" id="iframeEmbed"></iframe>
