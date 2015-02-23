@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My Embed App</title>
+</head>
+
+<body bgcolor="#999999">
+
+
+
+
+<iframe src="" width="1100" height="1200" scrolling="no" id="iframeEmbed"></iframe>
+<script type="text/javascript">
+//Set Up variables For Embedable App.///
+var USER = "TEST";
+var productName = "Roman Name Ring";
+var shoppingcart = "";
+var currency = "USD";
+////////////////////////////////////////////////////////////
+var Poly_embed = document.getElementById("iframeEmbed");
+Poly_embed.src = "Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&currency="+currency;
+</script>
+
+
+
+</body>
+</html>
