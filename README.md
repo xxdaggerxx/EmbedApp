@@ -28,14 +28,16 @@ Add this Code anywhere in the BODY Tags of your HTML.
 var USER = "[ACCESS CODE]";
 var productName = "Roman Name Ring";
 var shoppingcart = "http://localhost/FakeShoppingCart.php";
+var currency = "USD";
 ////////////////////////////////////////////////////////////
 var Poly_embed = document.getElementById("iframeEmbed");
-Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart);
+Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&currency="+currency;
 </script>
 ```
 Replace the [Access code] with the one issued to you.<br>
 <b>productName</b> variable is the name of the default product. You can change this to which ever you prefer. You can also use the product SKU.<br>
-<b>shoppingcart</b> variable is most important. This is your shopping cart page that will recieve the product Details. Leave this empty if you prefer to use Polychemy.com's shopping cart (var shoppingcart = "";) .
+<b>shoppingcart</b> variable is most important. This is your shopping cart page that will recieve the product Details. Leave this empty if you prefer to use Polychemy.com's shopping cart (var shoppingcart = "";) .<br>
+<b>currency</b> - Change the display currency of the prices. Currently avilable currencies : USD, AUD, EUR, INR, GBP, SGD.
 
 <h1>Step 2 - Create Your Shopping Cart.</h1>
 After the user has finished customizing thier products on the app, and is ready to check out.<br>
