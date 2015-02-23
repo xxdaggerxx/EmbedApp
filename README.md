@@ -150,6 +150,9 @@ echo $result;
 ?>
 ```
 
-If everyhting is sucessful you will get {"result":"OK"} Response.<br/>
+If everyhting is sucessful you will get:<br/>
+```json
+{"result":"OK"}
+```
 The order has been placed and we will begin manufacturing, ONLY after payment is made with us.<br>
 Payment must be made in USD only.
