@@ -44,7 +44,7 @@ POST Variables Details.<br>
 <ul>
 
 <li><b>Name</b> - Name of the product "Roman Name Ring"</li>
-<li><b>Price</b> - Retail Price of Product "$119.99"</li>
+<li><b>Price</b> - Retail Price of Product "119.99"</li>
 <li><b>Image</b> - Image address of product "http://polychemy3d.com/ModelDATABASE.php?getfile=JPG&ID=659520651679486100" </li>
 <li><b>ProductDATA</b> - A Stringified JSON Data</li>
 <li><b>ID</b> - User ID.</li>
