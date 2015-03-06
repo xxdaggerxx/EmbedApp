@@ -22,22 +22,25 @@ here's a brief overview of the app implimentation.<br>
 <h1>Step 1 - Embed Iframe App.</h1>
 Add this Code anywhere in the BODY Tags of your HTML.
 ```javascript
-<iframe src="" width="1000" height="1200" scrolling="no" id="iframeEmbed"></iframe>
+<iframe src="" width="1100" height="1200" scrolling="no" id="iframeEmbed"></iframe>
 <script type="text/javascript">
 //Set Up variables For Embedable App.///
 var USER = "[ACCESS CODE]";
 var productName = "Roman Name Ring";
-var shoppingcart = "http://localhost/FakeShoppingCart.php";
+var shoppingcart = "http://yoursite.com/FakeShoppingCart.php";
+//var shoppingcart = "";
 var currency = "USD";
+var buyButton = "Add To Cart";
 ////////////////////////////////////////////////////////////
 var Poly_embed = document.getElementById("iframeEmbed");
-Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&currency="+currency;
+Poly_embed.src = "Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&currency="+currency+"&buyButton="+encodeURIComponent(buyButton);
 </script>
 ```
 Replace the [Access code] with the one issued to you.<br>
 <b>productName</b> variable is the name of the default product. You can change this to which ever you prefer. You can also use the product SKU.<br>
 <b>shoppingcart</b> variable is most important. This is your shopping cart page that will recieve the product Details. Leave this empty if you prefer to use Polychemy.com's shopping cart (var shoppingcart = "";) .<br>
-<b>currency</b> - Change the display currency of the prices. Currently avilable currencies : USD, AUD, EUR, INR, GBP, SGD.
+<b>currency</b> - Change the display currency of the prices. Currently avilable currencies : USD, AUD, EUR, INR, GBP, SGD.</br>
+<b>buyButton</b> - Customize the checkout button. Default is "Add To Cart".
 
 <h1>Step 2 - Create Your Shopping Cart.</h1>
 After the user has finished customizing thier products on the app, and is ready to check out.<br>
