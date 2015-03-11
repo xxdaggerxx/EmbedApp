@@ -174,7 +174,7 @@ And another POST variable: 'addOrder' string to POST variable 'command'.
 "cdtoken":"",
 "sendinvoice":false
 },
-"ShoppingCart":[{STRINGIFIED ProductDATA}],
+"ShoppingCart":[{JSON Phased ProductDATA}],
 "ID":"641567956",
 "referal":{
 "referalID":"[ACCESS ID]",
