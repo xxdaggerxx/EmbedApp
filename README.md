@@ -175,7 +175,7 @@ Please make sure you stringify the data and URL encode it before sending it over
 "cdtoken":"",
 "sendinvoice":false
 },
-"ShoppingCart":[{JSON Phased ProductDATA}],
+"ShoppingCart":[{JSON Encoded ProductDATA}],
 "ID":"641567956",
 "referal":{
 "referalID":"[ACCESS ID]",
