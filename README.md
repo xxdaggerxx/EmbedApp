@@ -154,7 +154,8 @@ echo $result;
 ```
 Here's a JSON example request.<br>
 You will have to send the following JSON request to POST variable 'customerData'.<br>
-And a 'addOrder' string to POST variable 'command'.
+And a 'addOrder' string to POST variable 'command'.<br>
+Please make sure you stringify the data and URL encode it before sending it over to our system.
 
 ```json
 {
