@@ -159,7 +159,7 @@ And another POST variable: 'addOrder' string to POST variable 'command'.
 ```json
 {
 "customerData":{
-"email":"aaron.issac@gmail.com",
+"email":"customer@gmail.com",
 "street":"Ave 12",
 "city":"New York",
 "state":"New York",
