@@ -1,4 +1,4 @@
-# Polychemy's Embedable App.
+# Polychemy's Embedable App. BETA.
 Polychemy's Embeddable App Implementation.<br>
 
 <p>
