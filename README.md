@@ -159,32 +159,30 @@ Please make sure you stringify the data and URL encode it before sending it over
 
 ```json
 {
-"customerData":{
-"email":"aaron.issac@gmail.com",
-"street":"Ave 12",
-"city":"New York",
-"state":"New York",
-"zip":"123232",
-"country":"United States",
-"name":"John Doe",
-"hpnumber":"383748743",
-"gender":"none",
-"forwho":"none",
-"occasion":"none",
-"coupon":"",
-"cdtoken":"",
-"sendinvoice":false
-},
-"ShoppingCart":[
-{ JSON ENCODED PRODUCT DATA }
-],
-"ID":"641567956",
-"referal":{
-"referalID":"[ACCESS ID]",
-"type":"[ACCESS ID]"
-},
-"paymentType":"ExternalCart",
-"secret":"polychemy"
+	"customerData":{
+		"email":"aaron.issac@gmail.com",
+		"street":"Ave 12",
+		"city":"New York",
+		"state":"New York",
+		"zip":"123232",
+		"country":"United States",
+		"name":"John Doe",
+		"hpnumber":"383748743",
+		"gender":"none",
+		"forwho":"none",
+		"occasion":"none",
+		"coupon":"",
+		"cdtoken":"",
+		"sendinvoice":false
+	},
+	"ShoppingCart":[{ JSON ENCODED PRODUCT DATA }],
+	"ID":"641567956",
+	"referal":{
+		"referalID":"[ACCESS ID]",
+		"type":"[ACCESS ID]"
+	},
+	"paymentType":"ExternalCart",
+	"secret":"polychemy"
 }
 
 ```
