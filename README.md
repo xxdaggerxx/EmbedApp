@@ -160,7 +160,7 @@ Please make sure you stringify the data and URL encode it before sending it over
 ```json
 {
 "customerData":{
-"email":"customer@gmail.com",
+"email":"aaron.issac@gmail.com",
 "street":"Ave 12",
 "city":"New York",
 "state":"New York",
@@ -175,14 +175,16 @@ Please make sure you stringify the data and URL encode it before sending it over
 "cdtoken":"",
 "sendinvoice":false
 },
-"ShoppingCart":[{JSON Encoded ProductDATA}],
+"ShoppingCart":[
+{ JSON ENCODED PRODUCT DATA }
+],
 "ID":"641567956",
 "referal":{
 "referalID":"[ACCESS ID]",
 "type":"[ACCESS ID]"
 },
 "paymentType":"ExternalCart",
-"secret":"[SECRET KEY]"
+"secret":"polychemy"
 }
 
 ```
