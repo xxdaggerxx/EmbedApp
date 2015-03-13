@@ -33,7 +33,7 @@ var currency = "USD";
 var buyButton = "Add To Cart";
 ////////////////////////////////////////////////////////////
 var Poly_embed = document.getElementById("iframeEmbed");
-Poly_embed.src = "Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&currency="+currency+"&buyButton="+encodeURIComponent(buyButton);
+Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&currency="+currency+"&buyButton="+encodeURIComponent(buyButton);
 </script>
 ```
 Replace the [Access code] with the one issued to you.<br>
