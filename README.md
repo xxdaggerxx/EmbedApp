@@ -244,7 +244,7 @@ This is how your JSON should look when you pass the data to us. Be sure to serea
 "referal":{
 	"referalID":"[ACCESS ID]",
 	"type":"[ACCESS ID]"
-},
+}
 
 ```
 
