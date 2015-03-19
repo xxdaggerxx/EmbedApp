@@ -8,7 +8,9 @@ The apps can be hooked up to the your shopping cart, ensuring a much better user
 
 </p>
 
-By Using our Apps, you agree to our <a herf="http://www.polychemy.com/Privacy.php">Privacy Policy</a> and <herf="http://www.polychemy.com/Policies.php">Terms & Conditions.</a>
+By Using our Apps, [you agree](sdF) to our <a herf="http://www.polychemy.com/Privacy.php">Privacy Policy</a> and <herf="http://www.polychemy.com/Policies.php">Terms & Conditions.</a>
+
+
 
 <h1> How Does it Work? </h1>
 here's a brief overview of the app implimentation.<br>
