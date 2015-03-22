@@ -41,7 +41,6 @@ Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embe
 Replace the [Access code] with the one issued to you.<br>
 <b>productName</b> variable is the name of the default product. You can change this to which ever you prefer. You can also use the product SKU.<br>
 <b>shoppingcart</b> variable is most important. This is your shopping cart page that will recieve the product Details. Leave this empty if you prefer to use Polychemy.com's shopping cart (var shoppingcart = "";) .<br>
-<b>currency</b> - Change the display currency of the prices. Currently avilable currencies : USD, AUD, EUR, INR, GBP, SGD.<br>
 <b>buyButton</b> - Customize the checkout button. Default is "Add To Cart".
 
 <h1>Step 2 - Create Your Shopping Cart.</h1>
