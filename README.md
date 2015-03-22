@@ -32,11 +32,10 @@ var USER = "[ACCESS CODE]";
 var productName = "Roman Name Ring";
 var shoppingcart = "http://yoursite.com/FakeShoppingCart.php";
 //var shoppingcart = "";
-var currency = "USD";
 var buyButton = "Add To Cart";
 ////////////////////////////////////////////////////////////
 var Poly_embed = document.getElementById("iframeEmbed");
-Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&currency="+currency+"&buyButton="+encodeURIComponent(buyButton);
+Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&buyButton="+encodeURIComponent(buyButton);
 </script>
 ```
 Replace the [Access code] with the one issued to you.<br>
