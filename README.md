@@ -28,20 +28,22 @@ Add this Code anywhere in the BODY Tags of your HTML.
 <iframe src="" width="1100" height="1200" scrolling="no" id="iframeEmbed"></iframe>
 <script type="text/javascript">
 //Set Up variables For Embedable App.///
-var USER = "[ACCESS CODE]";
+var USER = "[ACCESSCODE]";
 var productName = "Roman Name Ring";
 var shoppingcart = "http://yoursite.com/FakeShoppingCart.php";
+var currency = "USD";
 //var shoppingcart = "";
 var buyButton = "Add To Cart";
 ////////////////////////////////////////////////////////////
 var Poly_embed = document.getElementById("iframeEmbed");
-Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&buyButton="+encodeURIComponent(buyButton);
+Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&buyButton="+encodeURIComponent(buyButton)+"&currency="+currency;
 </script>
 ```
 Replace the [Access code] with the one issued to you.<br>
 <b>productName</b> variable is the name of the default product. You can change this to which ever you prefer. You can also use the product SKU.<br>
 <b>shoppingcart</b> variable is most important. This is your shopping cart page that will recieve the product Details. Leave this empty if you prefer to use Polychemy.com's shopping cart (var shoppingcart = "";) .<br>
-<b>buyButton</b> - Customize the checkout button. Default is "Add To Cart".
+<b>buyButton</b> - Customize the checkout button. Default is "Add To Cart".</br>
+<b>currency</b> - The Default Currency.</br>
 
 <h1>Step 2 - Create Your Shopping Cart.</h1>
 After the user has finished customizing thier products on the app, and is ready to check out.<br>
