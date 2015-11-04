@@ -25,19 +25,26 @@ here's a brief overview of the app implimentation.<br>
 <h1>Step 1 - Embed Iframe App.</h1>
 Add this Code anywhere in the BODY Tags of your HTML.
 ```javascript
-<iframe src="" width="1100" height="1200" scrolling="no" id="iframeEmbed"></iframe>
+<!-----POLYCHEMY EMBED CODE - Copy & Paste this code between the Body tages of your HTML	---->
+<div id="iframeEmbed"></id>		
 <script type="text/javascript">
 //Set Up variables For Embedable App.///
-var USER = "[ACCESSCODE]";
+var USER = "[ACCESS_CODE]";
+//Set default product.
 var productName = "Roman Name Ring";
-var shoppingcart = "http://yoursite.com/FakeShoppingCart.php";
-var currency = "USD";
-//var shoppingcart = "";
+//Do you have an external cart?
+//var shoppingcart = "http://localhost/FakeShoppingCart.php";
+//if no shopping cart leave shoppingcart variable empty
+var shoppingcart = "";
 var buyButton = "Add To Cart";
-////////////////////////////////////////////////////////////
-var Poly_embed = document.getElementById("iframeEmbed");
-Poly_embed.src = "http://www.polychemy.com/Jewelry.php?name="+productName+"&embed=true&User="+USER+"&shoppingCart="+encodeURIComponent(shoppingcart)+"&buyButton="+encodeURIComponent(buyButton)+"&currency="+currency;
+var currency = "USD";
+//Dimensions	
+var P_height = "1300";
+var P_width = "100%";
 </script>
+<!--END POLYCHEMY EMBED CODE - Polychemy.com-->
+<script src="http://polychemy.com/js/polyEmbed.js"></script>
+
 ```
 Replace the [Access code] with the one issued to you.<br>
 <b>productName</b> variable is the name of the default product. You can change this to which ever you prefer. You can also use the product SKU.<br>
